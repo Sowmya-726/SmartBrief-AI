@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Minutes Maker • Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="/home.html">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">AI Minutes Maker</span>
+        </a>
+        <nav class="nav">
+          <a class="nav-link" href="/home.html">Home</a>
+          <a class="nav-link" href="/login.html" data-login-link>Login</a>
+          <button class="btn btn-ghost btn-sm" type="button" data-logout>Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="dash-head">
+        <div>
+          <h1 class="page-title">Dashboard</h1>
+          <p class="muted">Upload a recording and generate summary + timeline.</p>
+        </div>
+        <div class="status-pill" data-auth-status>
+          <span class="dot dot-green" aria-hidden="true"></span>
+          <span>Authenticated (demo)</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2 class="card-title">Upload</h2>
+          <form data-upload-form>
+            <label class="field">
+              <span class="field-label">File (mp3, wav, mp4, m4a, aac, ogg)</span>
+              <input class="input" type="file" name="file" accept=".mp3,.wav,.mp4,.m4a,.aac,.ogg" required />
+            </label>
+
+            <div class="two-col">
+              <label class="field">
+                <span class="field-label">Category</span>
+                <select class="input" name="category">
+                  <option value="Meeting">Meeting</option>
+                  <option value="Lecture">Lecture</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field-label">Topic (optional)</span>
+                <input class="input" type="text" name="topic" placeholder="e.g., Sprint planning / Data structures" />
+              </label>
+            </div>
+
+            <button class="btn btn-primary" type="submit" data-generate>
+              <span data-generate-text>Generate Summary</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-msg is-error" data-error></div>
+            <div class="form-msg is-ok" data-ok></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Downloads</h2>
+          <p class="muted">Download the latest generated result.</p>
+          <div class="downloads">
+            <button class="btn btn-ghost" type="button" data-download="txt" disabled>Download .txt</button>
+            <button class="btn btn-ghost" type="button" data-download="pdf" disabled>Download .pdf</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="split" data-output hidden>
+        <div class="card">
+          <div class="split-title">
+            <h2 class="card-title">Summary</h2>
+          </div>
+
+          <div class="summary-block">
+            <h3 class="section-title">Short Summary</h3>
+            <p class="text" data-short-summary></p>
+          </div>
+
+          <div class="summary-block">
+            <h3 class="section-title">Key Insights</h3>
+            <ul class="list" data-key-insights></ul>
+          </div>
+
+          <div class="summary-block">
+            <h3 class="section-title">Action Items</h3>
+            <ul class="list" data-action-items></ul>
+          </div>
+
+          <div class="summary-block">
+            <h3 class="section-title">Full Transcript</h3>
+            <textarea class="textarea" data-transcript rows="10" readonly></textarea>
+          </div>
+        </div>
+
+        <div class="card timeline-card">
+          <div class="split-title">
+            <h2 class="card-title">Timeline</h2>
+            <span class="muted small">Click an item to highlight</span>
+          </div>
+          <div class="timeline" role="list" data-timeline></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Minutes Maker • Home</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="/home.html">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">AI Minutes Maker</span>
+        </a>
+        <nav class="nav">
+          <a class="nav-link" href="/login.html">Login</a>
+          <a class="btn btn-primary btn-sm" href="/login.html">Get Started</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="badge">Audio/Video → Transcript → Summary + Timeline</div>
+          <h1 class="hero-title">Turn recordings into actionable minutes.</h1>
+          <p class="hero-subtitle">
+            Upload any meeting or lecture recording. Get a clean AI summary, action items, and a
+            timeline view you can skim.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/login.html">Get Started</a>
+            <a class="btn btn-ghost" href="/dashboard.html" data-auth-link>Go to Dashboard</a>
+          </div>
+          <p class="fineprint">
+            Works best with clear speech audio.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="card card-glow">
+            <h2 class="card-title">How it works</h2>
+            <ol class="steps">
+              <li>
+                <div class="step-num">1</div>
+                <div class="step-body">
+                  <div class="step-title">Login / Sign up</div>
+                  <div class="step-text">Quick frontend-only auth to access the dashboard.</div>
+                </div>
+              </li>
+              <li>
+                <div class="step-num">2</div>
+                <div class="step-body">
+                  <div class="step-title">Upload audio/video</div>
+                  <div class="step-text">MP3, WAV, MP4, M4A, AAC, OGG supported.</div>
+                </div>
+              </li>
+              <li>
+                <div class="step-num">3</div>
+                <div class="step-body">
+                  <div class="step-title">Get summary + timeline</div>
+                  <div class="step-text">Left: summary. Right: clickable timeline points.</div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-grid">
+        <div class="card">
+          <div class="card-kicker">Minimal</div>
+          <h3 class="card-title-sm">Clean cards</h3>
+          <p class="muted">
+            A focused layout that keeps summary content intact and adds timeline as a separate panel.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-kicker">Fast</div>
+          <h3 class="card-title-sm">Skimmable timeline</h3>
+          <p class="muted">
+            Uses transcript timestamps when available, otherwise generates approximate intervals.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-kicker">Responsive</div>
+          <h3 class="card-title-sm">Mobile-friendly</h3>
+          <p class="muted">Split layout on desktop, stacked layout on mobile.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span class="muted">© <span data-year></span> AI Minutes Maker</span>
+        <a class="muted link" href="/login.html">Get Started</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

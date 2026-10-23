@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+faster-whisper
+openai
+fpdf2
+python-dotenv
+passlib
+python-jose[cryptography]
+email-validator

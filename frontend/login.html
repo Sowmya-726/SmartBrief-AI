@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Minutes Maker • Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="/home.html">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">AI Minutes Maker</span>
+        </a>
+        <nav class="nav">
+          <a class="nav-link" href="/home.html">Home</a>
+          <a class="nav-link" href="/dashboard.html" data-auth-link>Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-center">
+      <section class="auth-shell">
+        <div class="auth-left">
+          <h1 class="page-title">Welcome back User!</h1>
+          
+          <div class="info-card">
+            <div class="info-row">
+              <span class="dot dot-green" aria-hidden="true"></span>
+              <span class="muted">After login you’ll be redirected to the dashboard.</span>
+            </div>
+            <div class="info-row">
+              
+              <span class="muted"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-right">
+          <div class="card card-glow">
+            <div class="tabs" role="tablist" aria-label="Auth tabs">
+              <button class="tab is-active" type="button" data-tab="login" role="tab" aria-selected="true">
+                Login
+              </button>
+              <button class="tab" type="button" data-tab="signup" role="tab" aria-selected="false">
+                Sign up
+              </button>
+            </div>
+
+            <div class="tab-panels">
+              <form class="panel is-active" data-panel="login" data-auth-form="login">
+                <label class="field">
+                  <span class="field-label">Email</span>
+                  <input class="input" name="email" type="email" autocomplete="email" required />
+                </label>
+                <label class="field">
+                  <span class="field-label">Password</span>
+                  <input class="input" name="password" type="password" autocomplete="current-password" required />
+                </label>
+                <div class="row">
+                  <label class="checkbox">
+                    <input type="checkbox" name="remember" />
+                    <span class="muted">Remember me</span>
+                  </label>
+                  <span class="muted">Demo only</span>
+                </div>
+                <button class="btn btn-primary" type="submit">Login</button>
+                <div class="form-msg" data-form-msg></div>
+              </form>
+
+              <form class="panel" data-panel="signup" data-auth-form="signup">
+                <label class="field">
+                  <span class="field-label">Email</span>
+                  <input class="input" name="email" type="email" autocomplete="email" required />
+                </label>
+                <label class="field">
+                  <span class="field-label">Password</span>
+                  <input class="input" name="password" type="password" autocomplete="new-password" required minlength="6" />
+                </label>
+                <button class="btn btn-primary" type="submit">Create account</button>
+                <div class="form-msg" data-form-msg></div>
+              </form>
+            </div>
+          </div>
+
+          <div class="below-card">
+            <a class="link muted" href="/home.html">← Back to Home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

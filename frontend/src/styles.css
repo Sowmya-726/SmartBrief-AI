@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f8;
+  color: #111827;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 14px;
+}
+
+.results .card h2 {
+  margin-top: 0;
+}
+
+.downloads {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.timeline-item:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.timeline-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.timeline-item.selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.timeline-time {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 12px;
+  color: #374151;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  font-size: 14px;
+  line-height: 1.35;
+  color: #111827;
+  overflow-wrap: anywhere;
+}
